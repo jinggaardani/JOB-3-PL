@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pengecek Cuaca</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-cyan-800 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-6 rounded-xl shadow-md w-full max-w-sm">
+       <h1 class="text-xl font-bold mb-4 text-center">WEATHER CHECK</h1>
+       <input 
+       type="text" 
+       id="NamaKota" 
+       placeholder="Enter City Name..." 
+       class="w-full px-4 py-2 border border-blue-500 rounded-md mb-4"
+       />
+       <button 
+       onclick="getWeather()"
+       class="bg-pink-400 text-white px-4 py-2 font-bold rounded-md w-full"
+       >
+        CHECK
+    </button>
+
+    <div id="result" class="mt-6 text-center hidden">
+        <h2 class="text-lg font-semibold text-center mb-4">Weather in <span id="cityName" class="font-bold"></span></h2>
+
+      <div class="grid grid-cols-3 gap-4 text-center">
+        <div class="bg-gray-100 p-4 rounded-lg shadow">
+          <div class="text-red-600 text-2xl mb-1">🌡</div>
+          <p class="text-sm">Temperature</p>
+          <p id="temperature" class="font-bold text-lg"></p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg shadow">
+          <div class="text-blue-600 text-2xl mb-1">💧</div>
+          <p class="text-sm">Humidity</p>
+          <p id="humidity" class="font-bold text-lg"></p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg shadow">
+          <div class="text-gray-600 text-2xl mb-1">📈</div>
+          <p class="text-sm">Pressure</p>
+          <p id="pressure" class="font-bold text-lg"></p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg shadow">
+          <div class="text-yellow-600 text-2xl mb-1">🌧</div>
+          <p class="text-sm">Condition</p>
+          <p id="cuaca" class="font-bold text-lg"></p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg shadow">
+          <div class="text-green-600 text-2xl mb-1">🌍</div>
+          <p class="text-sm">Ground Level</p>
+          <p id="ground-level" class="font-bold text-lg"></p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg shadow">
+          <div class="text-purple-600 text-2xl mb-1">🕒</div>
+          <p class="text-sm">Timezone</p>
+          <p id="timezone" class="font-bold text-lg"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
